@@ -22,12 +22,13 @@ class Vehiculo extends Model{
      * @var array
      */
     protected $fillable = ['color', 'cilindraje', 'potencia','peso','fabricante_id'];
+    protected $hidden = ['created_at', 'updated_at'];
 
     /**
      * Get the fabricante that owns the vehiculo.
      */
     public function fabricante()
     {
-        return $this->belongsTo('Fabricante');
+        return $this->belongsTo('App\Fabricante');
     }
 }
