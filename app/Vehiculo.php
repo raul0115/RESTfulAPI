@@ -21,7 +21,7 @@ class Vehiculo extends Model{
      *
      * @var array
      */
-    protected $fillable = ['color', 'cilindraje', 'potencia','peso'];
+    protected $fillable = ['color', 'cilindraje', 'potencia','peso','fabricante_id'];
 
     /**
      * Get the fabricante that owns the vehiculo.
