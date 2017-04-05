@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('fabricantes','FabricanteController');
+Route::resource('fabricantes.vehiculos','FabricanteVehiculoController',['except'=>['show']]);
+Route::resource('vehiculos','VehiculoController',['only'=>['index','show']]);
+
